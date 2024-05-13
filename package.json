@@ -1,0 +1,14 @@
+{
+  "name": "notificaciones_mercadopago",
+  "version": "1.0.0",
+  "description": "Escuchador de notificaciones de pagos por MercadoPago",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "CMSIS",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
