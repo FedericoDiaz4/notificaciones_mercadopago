@@ -1,6 +1,6 @@
 const getId = (idsMerchantOrders) => {
   if (idsMerchantOrders.length > 0) {
-    const idResponse = idsMerchantOrdersCaja1[0];
+    const idResponse = idsMerchantOrders[0];
     return { id: idResponse };
   } else {
     return null;
