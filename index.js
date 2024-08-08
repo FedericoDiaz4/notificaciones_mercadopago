@@ -1,4 +1,4 @@
-import express from "express";
+import express, { response } from "express";
 import https from "https";
 import { getId, deleteId } from "./funciones.js";
 import winston from "winston";
@@ -82,6 +82,16 @@ app.get(`${url}/caja4`, (request, response) => {
     response.status(200).json({ id: idMerchantOrder });
   } else {
     response.status(204).json({ error: "not data" });
+  }
+});
+
+app.get(`${url}/logs`, async (request, response) => {
+  try {
+    const content = await fs.readFile("combined.log", "utf-8");
+    response.send(content);
+  } catch (error) {
+    logger.error("Error al leer el archivo:", error);
+    res.status(500).send("Error al leer el archivo");
   }
 });
 
